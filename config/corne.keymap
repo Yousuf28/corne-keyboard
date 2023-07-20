@@ -16,7 +16,7 @@
 // -----------------------------------------------------------------------------------------
 // |  MO 3|  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | NO   |
 // | ESC  |  A  |  S  |  D  |  F  | 2/G |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | GUI  |  Z  |  X  |  C  | 1/V|  B  |   |  N  |  M   |  ,  |  .  |  /  | GUI  |
+// | GUI  |  Z  |  X  |  C  | 1/V |  B  |   |  N  |  M   |  ,  |  .  |  /  | DEL  |
 
 //      | LALT| CTRL/TAB  | LSHIFT/BKSP |   | LWR/SPC | CTRL/ENT | ALT |
                         bindings = <
