@@ -57,7 +57,7 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  BL_TOG  &kp BL_CYCLE &kp BL_INC &kp BL_DEC &kp DLLR &kp PRCNT   &kp HOME &kp END &caps_word &kp INS &kp RPAR &kp BSPC
+   &trans  &kp BL_CYCLE &kp BL_INC &kp BL_DEC &kp DLLR &kp PRCNT   &kp HOME &kp END &caps_word &kp INS &kp RPAR &kp BSPC
    &kp LCTRL &kp LGUI   &kp K_MUTE &kp K_VOL_DN   &kp K_VOL_UP   &trans     &kp LEFT &kp DOWN &kp UP       &kp RIGHT &kp BSLH &kp GRAVE
    &kp RGB_TOG &kp RGB_EFF &kp RGB_EFR   &kp RGB_BRI &kp RGB_BRD &kp RGB_BRD &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
