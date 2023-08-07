@@ -8,6 +8,37 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/backlight.h>
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_caps {
+            timeout-ms = <50>;
+            key-positions = <2 7>;
+            bindings = <&caps_word>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp ESC>;
+        };
+    };
+};
+
+/ {
+    macros {
+        assign_r: assign_r {
+            compatible = "zmk,behavior-macro";
+            label = "ASSIGN_R";
+            #binding-cells = <0>;
+            bindings = <&none &kp SPACE &kp MINUS &kp GT &kp SPACE>;
+        };
+    };
 
 / {
     conditional_layers {
@@ -31,10 +62,10 @@
 
 //      | LALT| CTRL/TAB  | LSHIFT/BKSP |   | LWR/SPC | CTRL/ENT | ALT |
                         bindings = <
-   &none   &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U  &kp I     &kp O   &kp P    &none
-   &kp ESC &kp A &kp S &kp D &kp F &lt 2 G          &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
+   &lt 3 ESC   &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
+   &kp ESC &kp A &kp S &kp D &kp F &lt 2 G          &kp H &kp J  &kp K     &kp L   &kp SEMI &mt LSHIFT SQT
    &mt LGUI LEFT  &kp Z &kp X &kp C &lt 1 V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt LGUI DEL
-     &mt LALT DOWN &mt LCTRL TAB &mt LSHIFT BSPC             &lt 1 SPACE &mt LCTRL ENTER &mt LALT UP
+     &mt LALT caps_word &mt LCTRL TAB &mt LSHIFT BSPC             &lt 1 SPACE &mt LCTRL ENTER &mt LALT assign_r
                         >;
                 };
                 lower_layer {
@@ -44,7 +75,7 @@
 // |   NO |  -  |  _  |  =  |  +  |  \  |   |     |  [  |  ]  |  {  |  }  |   NO |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &none &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET   &kp AMPS   &kp STAR &kp LPAR    &kp RPAR &none
+   &none &kp EXCL  &kp AT   &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET   &kp AMPS   &kp STAR &kp LPAR    &kp RPAR &trans
    &kp GRAVE &kp N1  &kp N2  &kp N3   &kp N4   &kp N5  &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp DOT
    &none  &kp MINUS &kp UNDER &kp EQUAL  &kp PLUS  &kp BSLH        &kp SQT   &kp LBKT   &kp RBKT &kp LBRC    &kp RBRC &none
                                     &trans     &trans       &trans      &trans  &trans   &trans
@@ -58,21 +89,22 @@
 // | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &none  &bl BL_CYCLE &bl BL_INC &bl BL_DEC &kp DLLR &kp PRCNT   &kp HOME &kp END &caps_word &kp INS &none &none
+   &none  &bl BL_CYCLE &bl BL_INC &bl BL_DEC &kp DLLR &kp PRCNT   &kp HOME &kp END &caps_word &kp INS &none &trans
    &none &kp LGUI   &kp K_MUTE &kp K_VOL_DN   &kp K_VOL_UP   &none    &kp LEFT &kp DOWN &kp UP       &kp RIGHT &kp BSLH &kp GRAVE
  // &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_EFR   &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_BRD &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
- &none &none &none   &none &none &none &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+ &none &none &none   &none &none &none &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &assign_r &kp TILDE
+                            // &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                                &trans &trans   &trans   &trans   &trans    &trans
 
                         >;
                 };
 
-          other_layer {
+        tri_layer {
                      bindings = <
    &none  &none  &none  &none  &none  &none                       &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
    &none  &none    &none  &none    &none    &none                 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
-   &none &none &none &none &none &none &none &none &none &none &none &none
-                                   &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+   &none &none &none &none &none &none &kp LGUI(LC(LEFT)) &kp LALT(F4) &none &kp LGUI(LC(RIGHT)) &none &none
+                                   &trans &trans   &trans   &trans   &trans    &trans
                        >;
         
 
