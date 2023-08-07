@@ -45,7 +45,7 @@
 
 //      | LALT| CTRL/TAB  | LSHIFT/BKSP |   | LWR/SPC | CTRL/ENT | ALT |
                         bindings = <
-   &assign_r  &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U  &kp I     &kp O   &kp P    &none
+   &lt 3 LEFT  &kp Q &kp W &kp E &kp R &kp T          &kp Y &kp U  &kp I     &kp O   &kp P    &none
    &kp ESC &kp A &kp S &kp D &kp F &lt 2 G          &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
    &mt LGUI LEFT  &kp Z &kp X &kp C &lt 1 V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &mt LGUI DEL
      &mt LALT DOWN &mt LCTRL TAB &mt LSHIFT BSPC             &lt 1 SPACE &mt LCTRL ENTER &mt LALT UP
@@ -75,7 +75,7 @@
    &none  &bl BL_CYCLE &bl BL_INC &bl BL_DEC &kp DLLR &kp PRCNT   &kp HOME &kp END &caps_word &kp INS &none &none
    &none &kp LGUI   &kp K_MUTE &kp K_VOL_DN   &kp K_VOL_UP   &none    &kp LEFT &kp DOWN &kp UP       &kp RIGHT &kp BSLH &kp GRAVE
  // &rgb_ug RGB_TOG &rgb_ug RGB_EFF &rgb_ug RGB_EFR   &rgb_ug RGB_BRI &rgb_ug RGB_BRD &rgb_ug RGB_BRD &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
- &none &none &none   &none &none &none &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &kp PIPE &kp TILDE
+ &none &none &none   &none &none &none &kp UNDER &kp PLUS  &kp LBRC &kp RBRC &assign_r &kp TILDE
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
 
                         >;
@@ -85,7 +85,7 @@
                      bindings = <
    &none  &none  &none  &none  &none  &none                       &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
    &none  &none    &none  &none    &none    &none                 &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
-   &none &none &none &none &none &none &none &none &none &none &none &none
+   &none &none &none &none &none &none &kp LGUI(LC(LEFT)) &kp LALT(F4) &none &kp LGUI(LC(RIGHT)) &none &none
                                    &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                        >;
         
