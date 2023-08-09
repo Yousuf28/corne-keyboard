@@ -62,7 +62,7 @@
   &none  &kp LGUI   &kp K_MUTE &kp K_VOL_DN   &kp K_VOL_UP   &none              &kp LEFT    &kp DOWN   &kp UP       &kp RIGHT &kp BSLH  &mt LSHIFT SPACE
   &trans &none      &none      &none          &none          &none              &kp UNDER   &kp PLUS   &kp LBRC     &kp RBRC  &assign_r &kp TILDE
 
-                              &kp LGUI       &trans         &trans            &kp SPACE   &trans     &trans
+                              &kp LC(LSHIFT)       &trans         &trans            &kp SPACE   &trans     &trans
 
                         >;
                 };
