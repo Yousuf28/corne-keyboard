@@ -73,7 +73,7 @@
 
   &none  &none      &none      &none          &none          &none              &kp HOME            &kp END               &caps_word   &kp INS   &none     &kp BSPC
   &none  &kp LGUI   &kp K_MUTE &kp K_VOL_DN   &kp K_VOL_UP   &none              &kp LEFT            &kp DOWN              &kp UP       &kp RIGHT &kp BSLH  &mt LSHIFT SPACE
-  &trans &none      &none      &none          &none          &none              &kp LC(LGUI(LEFT))   &kp LC(LGUI(RIGHT))   &kp LBRC     &kp RBRC  &assign_r &kp TILDE
+  &trans &none      &none      &none          &none          &none              &kp LC(LG(LEFT))   &kp LC(LG(RIGHT))   &kp LBRC     &kp RBRC  &assign_r &kp TILDE
 
                               &tp LC(LSHIFT) SPACE      &trans         &trans            &kp SPACE   &trans     &trans
 
@@ -82,9 +82,9 @@
 
           other_layer {
                      bindings = <
-   &none  &none    &none  &none     &none     &none                     &kp F7     &kp F8    &kp F9   &kp F10   &kp F11   &kp F12
-   &none  &none    &none  &none     &none     &none                     &kp F1     &kp F2    &kp F3   &kp F4    &kp F5    &kp F6
-   &none  &none    &none  &none     &none     &none                     &none      &none     &none    &none     &none     &none
+   &none  &none    &none  &none     &none     &none                     &kp F7     &kp F8          &kp F9   &kp F10   &kp F11   &kp F12
+   &none  &none    &none  &none     &none     &none                     &kp F1     &kp F2          &kp F3   &kp F4    &kp F5    &kp F6
+   &none  &none    &none  &none     &none     &none                     &none      &kp LA(F4)     &none    &none     &none     &none
                           &kp LGUI  &trans   &kp SPACE                  &kp RET    &trans    &kp RALT
                        >;
         
