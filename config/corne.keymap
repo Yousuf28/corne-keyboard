@@ -52,7 +52,7 @@
                                            &kp ESC           &kp A      &kp S      &kp D           &kp F        &lt 2 G            &kp H             &kp J              &kp K              &kp L       &kp SEMI     &mt LSHIFT SQT
                                            &mt LGUI LEFT     &kp Z      &kp X      &kp C           &lt 1 V      &kp B              &kp N             &kp M              &kp COMMA          &kp DOT     &kp FSLH     &mt LGUI DEL
 
-                                                                          &mt LALT DOWN  &mt LCTRL TAB &mt LSHIFT BSPC              &lt 1 SPACE &mt LCTRL ENTER &mt LALT UP
+                                                                          &mt LALT DOWN  &mt LCTRL TAB &mt LSHIFT BSPC              &lt 1 SPACE &mt LCTRL ENTER &mt LALT caps_word
                          >;
                          };
 
